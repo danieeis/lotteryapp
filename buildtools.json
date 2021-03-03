@@ -53,10 +53,6 @@
             "namespace": "Helpers",
             "properties": [
                 {
-                    "name": "AppDisplayName",
-                    "type": "String"
-                },
-                {
                     "name": "AppCenterIdDroid",
                     "type": "String"
                 }
@@ -65,11 +61,17 @@
     },
     "environment": {
         "defaults": {
-            "AppId": "com.jrestrepo.florida_lottery"
+            "AppId": "com.jrestrepo.florida_lottery",
+            "AppBundleId": "com.jrestrepo.Florida-Lottery",
+            "BundleName": "FloridaLottery",
+            "AppDisplayName": "Lottery App"
         },
         "configuration": {
             "Debug": {
-                "AppId": "com.jrestrepo.florida_lotterydev"
+                "AppId": "com.jrestrepo.florida_lotterydev",
+                "AppBundleId": "com.jrestrepo.Florida-LotteryDev",
+                "BundleName": "FloridaLotteryDev",
+                "AppDisplayName": "Lottery App Dev"
             }
         }
     },
