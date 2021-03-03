@@ -55,6 +55,10 @@
                 {
                     "name": "AppCenterIdDroid",
                     "type": "String"
+                },
+                {
+                    "name": "AppDisplayName",
+                    "type": "String"
                 }
             ]
         }
