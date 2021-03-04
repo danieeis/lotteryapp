@@ -20,14 +20,14 @@
     },
     "images": {
         "directories": [
-            "images"
+            "Images"
         ],
         "conditionalDirectories": {
             "ios": [
-                "images//ios"
+                "Images//iOS"
             ],
             "android": [
-                "images//android"
+                "Images//Android"
             ]
         },
         "watermarkOpacity": null,
@@ -55,27 +55,17 @@
                 {
                     "name": "AppCenterIdDroid",
                     "type": "String"
-                },
-                {
-                    "name": "AppDisplayName",
-                    "type": "String"
                 }
             ]
         }
     },
     "environment": {
         "defaults": {
-            "AppId": "com.jrestrepo.florida_lottery",
-            "AppBundleId": "com.jrestrepo.Florida-Lottery",
-            "BundleName": "FloridaLottery",
-            "AppDisplayName": "Lottery App"
+            "AppId": "com.jrestrepo.florida_lottery"
         },
         "configuration": {
             "Debug": {
-                "AppId": "com.jrestrepo.florida_lotterydev",
-                "AppBundleId": "com.jrestrepo.Florida-LotteryDev",
-                "BundleName": "FloridaLotteryDev",
-                "AppDisplayName": "Lottery App Dev"
+                "AppId": "com.jrestrepo.florida_lotterydev"
             }
         }
     },
