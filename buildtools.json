@@ -20,14 +20,14 @@
     },
     "images": {
         "directories": [
-            "Images"
+            "images"
         ],
         "conditionalDirectories": {
             "ios": [
-                "Images//iOS"
+                "images//ios"
             ],
             "android": [
-                "Images//Android"
+                "images//android"
             ]
         },
         "watermarkOpacity": null,

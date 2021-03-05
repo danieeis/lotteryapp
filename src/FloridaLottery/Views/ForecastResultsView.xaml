@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:FloridaLottery.ViewModels" x:Class="FloridaLottery.Views.ForecastResultsView" Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <CollectionView ItemsSource="{Binding Forecasts}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"></LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Style="{DynamicResource GemsCard}">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}" TextColor="{DynamicResource Primary}"/>
+                                    <Label Text="X" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource Primary}"/>
+                                </StackLayout>
+                                <Line BackgroundColor="{DynamicResource Primary}" HeightRequest="1"/>
+                                <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Stretch" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding Draws}">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Frame Style="{DynamicResource DrawNumberCard}">
+                                                <Label Style="{DynamicResource DrawNumberLabel}" Text="{Binding Number}"/>
+                                            </Frame>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </FlexLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

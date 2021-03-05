@@ -16,6 +16,7 @@ namespace FloridaLottery
         {
             InitializeComponent();
 
+            DependencyService.Register<MockGemStore>();
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }

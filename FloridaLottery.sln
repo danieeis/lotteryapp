@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloridaLottery", "src\Flori
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Images", "Images\Images.csproj", "{7FAF267A-A736-4E0B-B222-AA61A5E60ED0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{103BDB44-6C88-432E-8406-5730C531A680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,20 @@ Global
 		{7FAF267A-A736-4E0B-B222-AA61A5E60ED0}.Release|iPhone.Build.0 = Release|Any CPU
 		{7FAF267A-A736-4E0B-B222-AA61A5E60ED0}.Default|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FAF267A-A736-4E0B-B222-AA61A5E60ED0}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Release|iPhone.Build.0 = Release|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{103BDB44-6C88-432E-8406-5730C531A680}.Default|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,5 +133,6 @@ Global
 		{F70E4438-0877-4F3B-BD59-BCFDBD07DD2A} = {6007F66C-32E7-4818-B0F6-977BFEC10C36}
 		{5870038B-AC88-4823-86D9-6EF4C125A517} = {6007F66C-32E7-4818-B0F6-977BFEC10C36}
 		{7FAF267A-A736-4E0B-B222-AA61A5E60ED0} = {C28710AC-0A9E-4B07-82D0-79DCEDDC5BC9}
+		{103BDB44-6C88-432E-8406-5730C531A680} = {6007F66C-32E7-4818-B0F6-977BFEC10C36}
 	EndGlobalSection
 EndGlobal

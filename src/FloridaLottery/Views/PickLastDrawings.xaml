@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FloridaLottery.Views.PickLastDrawings" xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:vm="clr-namespace:FloridaLottery.ViewModels" Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:PickLastDrawingsViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:DoubleToIntConverter x:Key="DoubleToIntConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="10">
+            <Label HorizontalTextAlignment="Center" FontSize="Title"
+                   Text="{Binding DrawingNumbers, StringFormat='Seleccione los ultimos {0} sorteos'}"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="10" VerticalTextAlignment="Center"/>
+                <Slider x:Name="SliderDraws" MinimumTrackColor="{DynamicResource Primary}" Maximum="30" Minimum="10" HorizontalOptions="FillAndExpand" Value="{Binding DrawingNumbers}">
+                    <Slider.Behaviors>
+                        <xct:EventToCommandBehavior EventName="ValueChanged" Command="{Binding SelectDrawNumbersCommand}"/>
+                    </Slider.Behaviors>
+                </Slider>
+                <Label Text="30" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Stretch" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding LastDrawings}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Style="{DynamicResource DrawNumberCard}">
+                            <Entry Style="{DynamicResource DrawNumberEntry}" Text="{Binding Number}"/>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+            <Button Style="{DynamicResource PrimaryButton}" VerticalOptions="EndAndExpand" Margin="40,0,40,0" Command="{Binding CreateForecastCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

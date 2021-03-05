@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FloridaLottery.Views.DrawResults" Title="{Binding Title}" xmlns:domain="clr-namespace:Domain;assembly=Domain" xmlns:local="clr-namespace:FloridaLottery.ViewModels">
+    <ContentPage.Content>
+        <RefreshView x:DataType="local:DrawResultsViewModel" Command="{Binding LoadGemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Gems}"
+                SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"></LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Style="{DynamicResource GemsCard}" x:DataType="domain:Gem">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}" TextColor="{DynamicResource Primary}"/>
+                                    <Label Text="X" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource Primary}"/>
+                                </StackLayout>
+                                <Line BackgroundColor="{DynamicResource Primary}" HeightRequest="1"/>
+                                <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Stretch" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding Draws}">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Frame Style="{DynamicResource DrawNumberCard}" x:DataType="domain:Draw">
+                                                <Label Style="{DynamicResource DrawNumberLabel}" Text="{Binding Number}"/>
+                                            </Frame>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </FlexLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

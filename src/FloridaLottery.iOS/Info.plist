@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>$AppDisplayName$</string>
+	<string>Lottery App</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.jrestrepo.Florida-Lottery</string>
 	<key>CFBundleVersion</key>

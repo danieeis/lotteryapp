@@ -65,6 +65,9 @@
         <PackageReference Include="Mobile.BuildTools">
             <Version>2.0.109-pre</Version>
         </PackageReference>
+        <PackageReference Include="Xamarin.CommunityToolkit">
+          <Version>1.0.3</Version>
+        </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.cs" />

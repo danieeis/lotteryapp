@@ -7,12 +7,14 @@ using Xamarin.Forms;
 
 using FloridaLottery.Models;
 using FloridaLottery.Services;
+using Domain;
 
 namespace FloridaLottery.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Gem> GemStore => DependencyService.Get<IDataStore<Gem>>();
 
         bool isBusy = false;
         public bool IsBusy
