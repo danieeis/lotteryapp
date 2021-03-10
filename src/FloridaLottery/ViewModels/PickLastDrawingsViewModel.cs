@@ -14,7 +14,7 @@ namespace FloridaLottery.ViewModels
     public class PickLastDrawingsViewModel : BaseViewModel
     {
 #if DEBUG
-        public int NumberSequence = 1234;
+        public int NumberSequence = -1;
 #else
         public int NumberSequence = -1;
 #endif
@@ -62,7 +62,7 @@ namespace FloridaLottery.ViewModels
             while (LastDrawings.Count != DrawingNumbers)
             {
                 if (LastDrawings.Count > DrawingNumbers)
-                    LastDrawings.RemoveAt(-1);
+                    LastDrawings.RemoveAt(LastDrawings.Count - 1);
                 else if (LastDrawings.Count < DrawingNumbers)
                     LastDrawings.Add(new Draw(NumberSequence == -1 ? string.Empty : NumberSequence++.ToString()));
             }

@@ -25,7 +25,7 @@
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Frame Style="{DynamicResource DrawNumberCard}">
-                            <Entry Style="{DynamicResource DrawNumberEntry}" Text="{Binding Number}"/>
+                            <Entry Style="{DynamicResource DrawNumberEntry}" Text="{Binding Number}" ReturnType="Next"/>
                         </Frame>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>

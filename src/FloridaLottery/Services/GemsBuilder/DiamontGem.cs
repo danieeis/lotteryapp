@@ -51,16 +51,32 @@ namespace FloridaLottery.Services.GemsBuilder
         {
             Group A, B, C, D;
             A = new Group(LastDrawings.Select(x =>
-                x.Number.ElementAt(0).ToString()
+                {
+                    if (string.IsNullOrEmpty(x.Number))
+                        return string.Empty;
+                    return x.Number.ElementAt(0).ToString();
+                }
             ).ToList());
             B = new Group(LastDrawings.Select(x =>
-                    x.Number.ElementAt(1).ToString()
+            {
+                if (string.IsNullOrEmpty(x.Number))
+                    return string.Empty;
+                return x.Number.ElementAt(1).ToString();
+            }
                 ).ToList());
             C = new Group(LastDrawings.Select(x =>
-                    x.Number.ElementAt(2).ToString()
+            {
+                if (string.IsNullOrEmpty(x.Number))
+                    return string.Empty;
+                return x.Number.ElementAt(2).ToString();
+            }
                 ).ToList());
             D = new Group(LastDrawings.Select(x =>
-                    x.Number.ElementAt(3).ToString()
+            {
+                if (string.IsNullOrEmpty(x.Number))
+                    return string.Empty;
+                return x.Number.ElementAt(3).ToString();
+            }
                 ).ToList());
             return new DrawsGrouped(A, B, C, D);
         }

@@ -30,9 +30,6 @@
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="Xamarin.UITest" Version="3.0.14" />
-    <PackageReference Include="Mobile.BuildTools">
-      <Version>2.0.109-pre</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FloridaLottery.iOS\FloridaLottery.iOS.csproj">

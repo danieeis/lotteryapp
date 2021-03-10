@@ -25,7 +25,8 @@ namespace FloridaLottery
 
         protected override void OnStart()
         {
-            AppCenter.Start($"android={Helpers.Settings.AppCenterIdDroid}" +
+            
+            AppCenter.Start($"android={Helpers.Secrets.AppCenterIdDroid}" +
                   "uwp={Your UWP App secret here};" +
                   "ios={Your iOS App secret here}",
                   typeof(Analytics), typeof(Crashes));

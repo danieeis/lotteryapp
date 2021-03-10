@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{730127AD-79F5-430E-9F94-FFE9FF080672}"
 	ProjectSection(SolutionItems) = preProject
 		buildtools.json = buildtools.json
-		secrets.json = secrets.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{C28710AC-0A9E-4B07-82D0-79DCEDDC5BC9}"
