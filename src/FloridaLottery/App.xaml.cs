@@ -6,6 +6,7 @@ using FloridaLottery.Views;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Analytics;
+using Acr.UserDialogs;
 
 namespace FloridaLottery
 {
@@ -18,8 +19,8 @@ namespace FloridaLottery
 
             DependencyService.Register<MockGemStore>();
             DependencyService.Register<MockDataStore>();
-
             DependencyService.Register<NavigationService>();
+            DependencyService.Register<MessageService>();
             MainPage = new AppShell();
         }
 

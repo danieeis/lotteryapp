@@ -14,7 +14,7 @@
                    Text="{Binding DrawingNumbers, StringFormat='Seleccione los ultimos {0} sorteos'}"></Label>
             <StackLayout Orientation="Horizontal">
                 <Label Text="10" VerticalTextAlignment="Center"/>
-                <Slider x:Name="SliderDraws" MinimumTrackColor="{DynamicResource Primary}" Maximum="30" Minimum="10" HorizontalOptions="FillAndExpand" Value="{Binding DrawingNumbers}">
+                <Slider x:Name="SliderDraws" MinimumTrackColor="{DynamicResource Primary}" Maximum="30" Minimum="10" HorizontalOptions="FillAndExpand" Value="{Binding DrawingNumbers}" IsEnabled="True" >
                     <Slider.Behaviors>
                         <xct:EventToCommandBehavior EventName="ValueChanged" Command="{Binding SelectDrawNumbersCommand}"/>
                     </Slider.Behaviors>

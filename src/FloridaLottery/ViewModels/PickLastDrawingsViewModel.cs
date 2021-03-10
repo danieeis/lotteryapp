@@ -8,6 +8,7 @@ using Domain;
 using FloridaLottery.Services;
 using Xamarin.CommunityToolkit.ObjectModel;
 using FloridaLottery.Services.GemsBuilder;
+using Xamarin.Forms;
 
 namespace FloridaLottery.ViewModels
 {
@@ -36,7 +37,7 @@ namespace FloridaLottery.ViewModels
         public PickLastDrawingsViewModel()
         {
             Title = "Lottery App";
-            DrawingNumbers = 10;
+            DrawingNumbers = 30;
             LastDrawings = new ObservableCollection<Draw>();
             Task.Run(SelectDrawNumbers);
         }
@@ -75,7 +76,8 @@ namespace FloridaLottery.ViewModels
             if (validationFailed)
             {
                 Console.WriteLine("Complete todos los sorteos seleccionados");
-                return Task.FromException(new ArgumentNullException());
+                DependencyService.Get<MessageService>().Toast("Complete todos los sorteos seleccionados");
+                return Task.CompletedTask;
             }
             if (DrawingNumbers < 30)
             {
