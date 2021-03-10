@@ -4,4 +4,15 @@
     <TargetFramework>net46</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="icons\icon_about.png" />
+    <None Remove="icons\icon_feed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="icons\icon_about.png" />
+    <BundleResource Include="icons\icon_feed.png" />
+  </ItemGroup>
 </Project>

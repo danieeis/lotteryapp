@@ -5,14 +5,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Domain;
-using FloridaLottery.Views;
+using FloridaLottery.Services;
 using Xamarin.CommunityToolkit.ObjectModel;
-using Xamarin.Forms;
+using FloridaLottery.Services.GemsBuilder;
 
 namespace FloridaLottery.ViewModels
 {
     public class PickLastDrawingsViewModel : BaseViewModel
     {
+#if DEBUG
+        public int NumberSequence = 1234;
+#else
+        public int NumberSequence = -1;
+#endif
+
         int _drawingNumbers;
         public int DrawingNumbers
         {
@@ -51,27 +57,6 @@ namespace FloridaLottery.ViewModels
             }
         }
 
-        private Task CreateForecast()
-        {
-            var validationFailed = LastDrawings.Any(x => x.Number == 0);
-            if (validationFailed)
-            {
-                Console.WriteLine("Complete todos los sorteos seleccionados");
-            }
-
-            Gem diamante = new Gem("Diamante");
-            diamante.Draws = LastDrawings;
-            Gem zafiro = new Gem("Zafiro");
-            zafiro.Draws = LastDrawings;
-            List<Gem> Gems = new List<Gem>() {
-                    diamante, zafiro
-                };
-
-            var forecast = new ForecastResultsViewModel(Gems);
-            Shell.Current.Navigation.PushAsync(new ForecastResultsView() { BindingContext = forecast });
-            return Task.CompletedTask;
-        }
-
         private Task SelectDrawNumbers()
         {
             while (LastDrawings.Count != DrawingNumbers)
@@ -79,9 +64,33 @@ namespace FloridaLottery.ViewModels
                 if (LastDrawings.Count > DrawingNumbers)
                     LastDrawings.RemoveAt(-1);
                 else if (LastDrawings.Count < DrawingNumbers)
-                    LastDrawings.Add(new Draw(4321));
+                    LastDrawings.Add(new Draw(NumberSequence == -1 ? string.Empty : NumberSequence++.ToString()));
             }
 
+            return Task.CompletedTask;
+        }
+        private Task CreateForecast()
+        {
+            var validationFailed = LastDrawings.Any(x => string.IsNullOrWhiteSpace(x.Number));
+            if (validationFailed)
+            {
+                Console.WriteLine("Complete todos los sorteos seleccionados");
+                return Task.FromException(new ArgumentNullException());
+            }
+            if (DrawingNumbers < 30)
+            {
+                DrawingNumbers = 30;
+                SelectDrawNumbers();
+            }
+            Gem diamante = new Gem("Diamante");
+            diamante.Draws = LastDrawings.GenerateDiamont().ToList();
+            
+            List<Gem> Gems = new List<Gem>() {
+                    diamante
+                };
+
+            var forecast = new ForecastResultsViewModel(Gems);
+            Xamarin.Forms.DependencyService.Get<NavigationService>().NavigatoTo("", forecast);
             return Task.CompletedTask;
         }
     }

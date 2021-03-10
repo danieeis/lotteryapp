@@ -47,7 +47,7 @@
                 <Setter Property="TextColor" Value="{DynamicResource White}"/>
                 <Setter Property="FontSize" Value="14"/>
             </Style>
-            <Color x:Key="Primary">#6AF678</Color>
+            <Color x:Key="Primary">#4CAF50</Color>
             <Color x:Key="Secondary">Gray</Color>
             <Color x:Key="BackgroundCardLight">#BDBDBD</Color>
             <Style TargetType="Button">

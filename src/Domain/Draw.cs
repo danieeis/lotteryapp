@@ -4,8 +4,8 @@ namespace Domain
 {
     public class Draw
     {
-        public int Number { get; set; }
+        public string Number { get; set; }
 
-        public Draw(int number) => (Number) = (number);
+        public Draw(string number) => (Number) = (number);
     }
 }

@@ -14,12 +14,12 @@ namespace FloridaLottery.Services
         {
             items = new List<Gem>()
             {
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "First Gem", Draws = GetDraws() },
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "Second Gem", Draws= GetDraws() },
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "Third Gem", Draws= GetDraws() },
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "Fourth Gem", Draws= GetDraws() },
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "Fifth Gem", Draws= GetDraws() },
-                new Gem { Id = Guid.NewGuid().ToString(), Name = "Sixth Gem", Draws= GetDraws() }
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Primera Gema", Draws = GetDraws() },
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Segunda Gema", Draws= GetDraws() },
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Tercera Gema", Draws= GetDraws() },
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Cuarta Gema", Draws= GetDraws() },
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Quinta Gema", Draws= GetDraws() },
+                new Gem { Id = Guid.NewGuid().ToString(), Name = "Sexta Gema", Draws= GetDraws() }
             };
         }
 
@@ -28,14 +28,14 @@ namespace FloridaLottery.Services
 
             return new List<Draw>()
             {
-                new Draw(1234),
-                new Draw(4321),
-                new Draw(1234),
-                new Draw(4321),
-                new Draw(1234),
-                new Draw(4321),
-                new Draw(1234),
-                new Draw(4321)
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234"),
+                new Draw("1234")
             };
         }
 
