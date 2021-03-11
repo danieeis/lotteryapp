@@ -108,6 +108,10 @@
           <SubType></SubType>
           <Generator></Generator>
         </AndroidResource>
+        <AndroidResource Include="Resources\drawable\icon.png">
+          <SubType></SubType>
+          <Generator></Generator>
+        </AndroidResource>
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\FloridaLottery\FloridaLottery.csproj">
