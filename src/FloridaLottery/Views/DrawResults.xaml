@@ -17,12 +17,14 @@
                                     <Label Text="X" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource Primary}"/>
                                 </StackLayout>
                                 <Line BackgroundColor="{DynamicResource Primary}" HeightRequest="1"/>
-                                <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Stretch" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding Draws}">
+                                <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding Draws}">
                                     <BindableLayout.ItemTemplate>
                                         <DataTemplate>
-                                            <Frame Style="{DynamicResource DrawNumberCard}" x:DataType="domain:Draw">
-                                                <Label Style="{DynamicResource DrawNumberLabel}" Text="{Binding Number}"/>
-                                            </Frame>
+                                            <StackLayout Spacing="0" Margin="5">
+                                                <Frame Style="{DynamicResource DrawNumberCard}" x:DataType="domain:Draw">
+                                                    <Label Style="{DynamicResource DrawNumberLabel}" Text="{Binding Number}"/>
+                                                </Frame>
+                                            </StackLayout>
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>
                                 </FlexLayout>

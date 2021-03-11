@@ -3,6 +3,8 @@
   <item android:drawable="@color/launcher_background"/>
   <item>
     <bitmap android:gravity="center"
-            android:src="@drawable/floridalotterylogo" />
+            android:src="@drawable/floridalotterylogo"
+            android:layout_gravity="center"
+            android:tileMode="disabled"/>
   </item>
 </layer-list>

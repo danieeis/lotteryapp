@@ -21,12 +21,14 @@
                 </Slider>
                 <Label Text="30" VerticalTextAlignment="Center"/>
             </StackLayout>
-            <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Stretch" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding LastDrawings}">
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignContent="Stretch" AlignItems="Center" JustifyContent="SpaceBetween" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BindableLayout.ItemsSource="{Binding LastDrawings}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Frame Style="{DynamicResource DrawNumberCard}">
-                            <Entry Style="{DynamicResource DrawNumberEntry}" Text="{Binding Number}" ReturnType="Next"/>
-                        </Frame>
+                        <StackLayout Spacing="0" Margin="5">
+                            <Frame Style="{DynamicResource DrawNumberCard}">
+                                <Entry Style="{DynamicResource DrawNumberEntry}" Text="{Binding Number}" ReturnType="Next"/>
+                            </Frame>
+                        </StackLayout>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </FlexLayout>

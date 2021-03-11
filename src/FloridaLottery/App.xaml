@@ -28,7 +28,6 @@
             <Style TargetType="Frame" x:Key="DrawNumberCard">
                 <Setter Property="BackgroundColor" Value="{DynamicResource Secondary}"/>
                 <Setter Property="WidthRequest" Value="60"/>
-                <Setter Property="HeightRequest" Value="40"/>
             </Style>
             <Style TargetType="Entry" x:Key="DrawNumberEntry">
                 <Setter Property="BackgroundColor" Value="{DynamicResource Secondary}"/>
@@ -39,6 +38,7 @@
                 <Setter Property="FontSize" Value="14"/>
                 <Setter Property="MaxLength" Value="4"/>
                 <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="ReturnType" Value="Next"/>
             </Style>
             <Style TargetType="Label" x:Key="DrawNumberLabel">
                 <Setter Property="BackgroundColor" Value="{DynamicResource Secondary}"/>
