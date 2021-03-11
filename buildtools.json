@@ -61,11 +61,11 @@
     },
     "environment": {
         "defaults": {
-            "AppId": "com.jrestrepo.florida_lottery"
+            "AppId": "com.dandevelok.florida_lottery"
         },
         "configuration": {
             "Debug": {
-                "AppId": "com.jrestrepo.florida_lotterydev"
+                "AppId": "com.dandevelok.florida_lotterydev"
             }
         }
     },

@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Lottery App</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jrestrepo.Florida-Lottery</string>
+	<string>com.dandevelok.Florida-Lottery</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
