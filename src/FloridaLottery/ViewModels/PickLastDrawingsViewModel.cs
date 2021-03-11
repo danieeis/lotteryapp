@@ -15,7 +15,7 @@ namespace FloridaLottery.ViewModels
     public class PickLastDrawingsViewModel : BaseViewModel
     {
 #if DEBUG
-        public int NumberSequence = -1;
+        public int NumberSequence = 1234;
 #else
         public int NumberSequence = -1;
 #endif
